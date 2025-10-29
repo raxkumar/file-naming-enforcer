@@ -83,7 +83,7 @@ out
 dist
 
 # Exception: GitHub Actions need their dist folder committed
-!.github/actions/*/dist
+!dist
 
 # Gatsby files
 .cache/
