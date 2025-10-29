@@ -1,0 +1,16 @@
+name: Test File Naming Enforcer
+on:
+  push:
+    branches: [main]
+
+jobs:
+  lint-filenames:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run File Naming Enforcer
+        uses: ./.github/actions/fne
+        with:
+          convention: kebab
+          exclude: node_modules,dist,.git

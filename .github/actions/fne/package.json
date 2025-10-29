@@ -1,0 +1,19 @@
+{
+  "name": "file-naming-enforcer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "GitHub Action that enforces consistent file naming conventions",
+  "author": "Rakesh Kumar",
+  "license": "Apache-2.0",
+  "keywords": [
+    "github-action",
+    "file-naming",
+    "convention",
+    "kebab-case",
+    "snake-case",
+    "camelCase"
+  ],
+  "dependencies": {
+    "@actions/core": "^1.11.1"
+  }
+}

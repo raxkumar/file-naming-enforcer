@@ -1,0 +1,23 @@
+name: "File Naming Convention Enforcer"
+description: "Checks repository files to ensure consistent naming convention (kebab-case by default)."
+author: "Rakesh Kumar"
+branding:
+  color: "blue"
+  icon: "check-circle"
+inputs:
+  convention:
+    description: "Naming convention to enforce (kebab, snake, or camel)."
+    required: false
+    default: "kebab"
+  exclude:
+    description: "Comma-separated list of folders to ignore (e.g. node_modules,dist)"
+    required: false
+    default: "node_modules,dist,.git"
+outputs:
+  passed:
+    description: "Whether all files passed the naming convention check"
+  failed_count:
+    description: "Number of files that failed the check"
+runs:
+  using: "node20"
+  main: "index.js"
