@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run File Naming Enforcer
-        uses: ./.github/actions/fne
+        uses: ./
         with:
           convention: snake
           exclude: node_modules,dist,.git
