@@ -12,5 +12,5 @@ jobs:
       - name: Run File Naming Enforcer
         uses: ./.github/actions/fne
         with:
-          convention: kebab
+          convention: snake
           exclude: node_modules,dist,.git
