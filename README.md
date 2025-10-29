@@ -32,22 +32,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      
-      - name: Build action
-        run: |
-          cd .github/actions/fne
-          npm install
-          npm run build
-      
-      - uses: ./.github/actions/fne
+      - uses: YOUR_USERNAME/file-naming-enforcer@v1
         with:
           convention: 'kebab'  # Options: 'kebab', 'snake', or 'camel'
           exclude: 'node_modules,dist,.git'
+```
+
+Replace `YOUR_USERNAME` with your GitHub username.
+
+### Local Development
+
+When you make changes to the action, rebuild it:
+
+```bash
+cd .github/actions/fne
+npm install
+npm run build
+git add dist/
+git commit -m "Update action"
 ```
 
 ### Options
