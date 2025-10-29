@@ -13,6 +13,9 @@
     "snake-case",
     "camelCase"
   ],
+  "scripts": {
+    "build": "ncc build index.js -o dist"
+  },
   "dependencies": {
     "@actions/core": "^1.11.1"
   }

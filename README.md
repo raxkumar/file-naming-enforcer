@@ -31,7 +31,19 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Build action
+        run: |
+          cd .github/actions/fne
+          npm install
+          npm run build
+      
       - uses: ./.github/actions/fne
         with:
           convention: 'kebab'  # Options: 'kebab', 'snake', or 'camel'
